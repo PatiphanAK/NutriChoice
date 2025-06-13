@@ -15,3 +15,13 @@
 - **PostgreSQL** – relational database for product data
 - **Docker** – containerized services
 - **Makefile** – simple command runner for common tasks
+
+## 🛠️ Setup
+
+1. **Environment Variables**  
+   Configure environment variables by editing the `set_env.sh` script:
+   ```bash
+   # Inside set_env.sh
+   export POSTGRES_USER="postgres"
+   export POSTGRES_PASSWORD="postgres"
+   export POSTGRES_DB="products_db"
