@@ -1,15 +1,12 @@
-# Load environment variables from .env using the script
-setenv:
-	@echo "🔧 Setting environment variables..."
-	@source ./set_env.sh
+include .env
+export $(shell sed 's/=.*//' .env)
 
-# Start the database (assumes docker-compose.yml is inside database/postgres)
+# Start the database
 dbup:
 	@echo "🐘 Starting PostgreSQL container..."
 	cd database/postgres && docker compose up -d
 
-# Run everything: setenv + dbup
-build:
-	@echo "🚀 Initializing environment and database..."
-	@$(MAKE) setenv
-	@$(MAKE) dbup
+# Run everything: env + dbup
+build: dbup
+	@echo "🚀 Database is up and running."
+
