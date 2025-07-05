@@ -14,3 +14,6 @@ dbup:
 build: dbup
 	@echo "🚀 Database is up and running."
 
+run_app_api :
+	@echo "Starting the API server..."
+	cd myapp && cargo run
