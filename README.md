@@ -11,7 +11,7 @@
 
 ## ⚛️ Tech Stack
 
-- **Go** – backend server and API logic (currently using fiber)
+- **Rust** – backend server and API logic 
 - **PostgreSQL** – relational database for product data
 - **Docker** – containerized services
 - **Makefile** – simple command runner for common tasks
