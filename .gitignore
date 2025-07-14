@@ -1,4 +1,5 @@
 .env
-/target
+myapp/target/
+**/target/
 **/*.rs.bk
 **/*.swp
