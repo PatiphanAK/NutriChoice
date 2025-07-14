@@ -1,1 +1,0 @@
-/home/tatar025/Documents/App/app1/NutriChoice/myapp/target/debug/myapp: /home/tatar025/Documents/App/app1/NutriChoice/myapp/src/entities/mod.rs /home/tatar025/Documents/App/app1/NutriChoice/myapp/src/entities/product.rs /home/tatar025/Documents/App/app1/NutriChoice/myapp/src/main.rs
