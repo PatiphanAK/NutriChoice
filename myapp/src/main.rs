@@ -1,12 +1,11 @@
 mod entities;
+mod routers;
+mod services;
+#[tokio::main]
+async fn main() {
+    let addr = "127.0.0.1:3000";
+    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
 
-use entities::product::Product;
-
-fn main() {
-    let p = Product {
-        id: 1,
-        name: String::from("Apple"),
-        price: 3.5,
-    };
-    println!("{:?}", p);
+    println!("Server running on {:?}", addr);
+    axum::serve(listener, routers::app_router()).await.unwrap();
 }
