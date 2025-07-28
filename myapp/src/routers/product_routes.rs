@@ -51,7 +51,7 @@ async fn update_product_handler(
 
 async fn delete_product_handler(Path(id): Path<u32>) -> StatusCode {
     if product_services::delete_product(id).await {
-        StatusCode::NO_CONTENT // 204 No Content for successful deletion
+        StatusCode::NO_CONTENT
     } else {
         StatusCode::NOT_FOUND
     }

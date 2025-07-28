@@ -19,7 +19,7 @@ pub async fn get_all_products() -> Vec<Product> {
 
 pub async fn get_product_by_id(id: u32) -> Option<Product> {
     let db = PRODUCTS_DB.lock().await;
-    db.iter().find(|p| p.id == id).cloned() // Return a clone if found
+    db.iter().find(|p| p.id == id).cloned()
 }
 
 pub async fn create_product(new_product: NewProduct) -> Product {
